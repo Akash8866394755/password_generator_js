@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/index.css" />
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="card">
+            <h3 id="title">Password Generator</h3>
+            <div id="password-field">
+                <input type="password" id="password" autocomplete="off">
+                <button id="eye-btn"><i class="fa fa-eye" id="eye-icon"></i></button>
+                <button id="copy-btn" title="copy"><i class="fa fa-copy"></i></button>
+            </div>
+            <div id="password-option">
+                <p id="option-title">Password settings</p>
+                <div id="set-option">
+                    <div id="char">
+                        <input type="checkbox" id="uppercase"> <span>Uppercase (A - Z)</span>
+                        <input type="checkbox" id="lowercase"> <span>Lowercase (a - z)</span>
+                    </div>
+                    <div id="char">
+                        <input type="checkbox" id="number"><span>Number (0 - 9)</span>
+                        <input type="checkbox" id="symbol"><span>Special symbols</span>
+                    </div>
+
+                </div>
+                <button id="generate-password">Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="animate__animated animate__fadeIn">
+        <div id="alert-box" class="animate__animated animate__zoomIn">
+            <div id="first">
+                <label for="">What's Your Name ?</label>
+                <input type="text" name="" id="username" autocomplete="off">
+                <p id="name-m" class="animate__animate animate__fadeIn">This field is require.</p>
+                <button type="button" id="name-btn">Submit</button>
+            </div>
+            <div id="second">
+                <i class="fa fa-user" style="font-size: 20px;"></i>
+                <p>Welcome Back <span id="back-name"></span></p>
+            </div>
+            <button id="close-btn"><i class="fa fa-times-circle"></i></button>
+            <!-- <button onclick="read()">read</button> -->
+        </div>
+    </div>
+</body>
+</html>
