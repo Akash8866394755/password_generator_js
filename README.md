@@ -3,4 +3,4 @@ We can quickly create a password that consists entirely of capital and lowercase
 and creating password combinations with capital, lowercase, digits, and symbols.
 Since there are a lot of hackers on the internet these days who can easily steal weak passwords but cannot steal strong passwords, I decided to make a password generator app that allows us to personalize our passwords according to our needs.
 I included a copy button in this project so that we could quickly copy our secure password from there.
-
+ My goal is to develop low-latency web applications.
