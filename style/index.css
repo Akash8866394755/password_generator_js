@@ -120,42 +120,13 @@ body {
     border-radius: 2px;
     position: relative;
     padding: 20px 20px 0 10px;
-}
-#alert-box div {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
-
-}
-#alert-box div label {
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-
-}
-#alert-box div input {
-    border-bottom:1px solid #ccc;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-#alert-box div input:focus {
-    outline: none;
-}
-#name-btn {
-    padding: 8px 30px;
-    border: none;
-    color: dodgerblue;
-    font-weight: 700;
-    border-radius: 2px;
-    width: fit-content;
-    margin: 12px 0;
-    background: linear-gradient(270deg, #e3ffe7 0%, #d9e7ff 100%);
-    cursor: pointer;
-
-}
 #close-btn {
     position: absolute;
     top: 0;
@@ -166,20 +137,11 @@ body {
     color: red;
     cursor: pointer;
 }
-#name-m {
-    padding: 0;
-    margin: 0;
-    color: red;
-    font-weight: 600;
-    display: none;
-}
-#second {
-    display: none;
-    color: dodgerblue;
-    font-weight: 600;
-    text-align: center;
-}
+
 #char span {
     font-size: 12px;
+}
+#lock {
+    color: green;
 }
 

@@ -266,45 +266,26 @@ window.onload = function() {
 
     var copyBtn = document.getElementById("copy-btn");
     copyBtn.onclick = function() {
+        if(password.value == "") {
+            return false;
+        }
         document.execCommand("copy");
+        var modal = document.getElementById("modal");
+        modal.style.display = "flex";
+        modal.className = "animate__animate animate__fadeIn";
+
+        var alertBox = document.getElementById("alert-box");
+        alertBox.className = "animate__animated animate__zoomIn";
+
+        document.getElementById("store-pws").innerHTML = password.value
     }
 
-    // store cookie
-    var nameBtn = document.getElementById("name-btn");
-    nameBtn.onclick = function() {
-        var username = document.getElementById("username");
-        if(username.value == "") {
-            var nameMessage = document.getElementById("name-m");
-            nameMessage.className = "animate__animated animate__fadeIn";
-            nameMessage.style.display = "block";
-        }
-        else {
-
-            document.cookie = "name = "+username.value+";expires = Tue, 2 Oct 2030 12:00:00 UTC";
-            username.value = "";
-
-            var modal = document.getElementById("modal");
-            modal.className = "animate__animate animate__fadeOut";
-
-            var alertBox = document.getElementById("alert-box");
-            alertBox.className = "animate__animated animate__zoomOut";
-
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, 800);
-        }
-        username.oninput = function() {
-            var nameMessage = document.getElementById("name-m");
-            nameMessage.className = "animate__animated animate__fadeOut";
-            nameMessage.style.display = "none";
-        }
-
-    }
+  
+ 
 
     var closeBtn = document.getElementById("close-btn");
     closeBtn.onclick = function() {
         
-         if(document.cookie.indexOf("name") != -1) {
 
             var modal = document.getElementById("modal");
             modal.className = "animate__animate animate__fadeOut";
@@ -314,51 +295,14 @@ window.onload = function() {
 
             setTimeout(function() {
                 modal.style.display = "none";
-            }, 800);
+            }, 500);
          }
-         else {
-            location.reload();
-
-         }
+        
      
     }
-    if(document.cookie.indexOf("name") != -1) {
-
-        var first = document.getElementById("first");
-        first.style.display = "none";
-        var modal = document.getElementById("modal");
-        modal.style.display = "flex";
-        modal.className = "animate__animate animate__fadeIn";
-
-        var alertBox = document.getElementById("alert-box");
-        alertBox.className = "animate__animated animate__zoomIn";
-
-        var second = document.getElementById("second");
-        second.style.display = "block";
-
-        var data = document.cookie.split("=");
-        var trData = document.getElementById("back-name");
-        trData.innerHTML = data[1];
-
-        // alert(data[1]);
 
 
 
-    }
-    else {
-
-        var modal = document.getElementById("modal");
-        modal.style.display = "flex";
-        modal.className = "animate__animate animate__fadeIn";
-
-        var alertBox = document.getElementById("alert-box");
-        alertBox.className = "animate__animated animate__zoomIn";
-
-        var second = document.getElementById("second");
-        second.style.display = "none";
-    }
-
-}
 
 
 
